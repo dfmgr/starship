@@ -1,9 +1,12 @@
-#format = """
-#[╭─user───❯](bold blue) $username
-#[┣─system─❯](bold yellow) $hostname
-#[┣─project❯](bold red) $directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
-#[╰─cmd────❯](bold green)
-#"""
+format = """
+[╭─user───❯](bold blue)$username(bold blue)$hostname
+[┣─project❯](bold red) $directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
+[╰─cmd────❯$character](bold green)
+"""
+#format = '$all'
+
+continuation_prompt = '▶▶ '
+
 [username]
 style_user = "green bold"
 style_root = "red bold"
@@ -13,7 +16,9 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = 'on [$hostname](bold purple) '
+ssh_symbol = "🌐 "
+format = '@ [$hostname](bold purple)[$ssh_symbol](bold blue)  '
+trim_at = ''
 disabled = false
 
 # Replace the "❯" symbol in the prompt with "➜"
@@ -25,7 +30,7 @@ error_symbol = " 🐧 [✗](bold red)"
 # configure directory
 [directory]
 read_only = " "
-truncation_length = 10
+truncation_length = 0
 truncate_to_repo = true    # truncates directory to root folder if in github repo
 style = "bold italic blue"
 
@@ -37,6 +42,9 @@ style = "bold italic red"
 
 [aws]
 symbol = "  "
+
+[bun]
+format = 'via [🍔 $version](bold green) '
 
 [conda]
 symbol = " "
@@ -138,6 +146,11 @@ symbol = " "
 
 [shlvl]
 symbol = " "
+
+[sudo]
+style = 'bold green'
+symbol = '👩‍💻 '
+disabled = false
 
 [swift]
 symbol = "ﯣ "
