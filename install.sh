@@ -187,8 +187,8 @@ fi
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # run post install scripts
 run_postinst() {
-  ln -sf "$APPDIR/starship.toml" "$HOME/.config/starship.toml"
   dfmgr_run_post
+  cp -Rf "$APPDIR/starship.toml" "$HOME/.config/starship.toml"
 }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # run post install scripts
