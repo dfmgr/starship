@@ -1,7 +1,7 @@
 format = """
-[╭─user───❯](bold blue)$username(bold blue)$hostname
-[┣─project❯](bold red) $directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
-[╰─cmd────❯$character](bold green)
+[╭─user───❯](bold blue)$username(bold blue)$hostname : $directory
+[┣─project❯](bold red)$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
+[╰─cmd $cmd_duration────❯$character](bold green)
 """
 #format = '$all'
 
@@ -17,7 +17,7 @@ show_always = true
 [hostname]
 ssh_only = false
 ssh_symbol = "🌐 "
-format = '@ [$hostname](bold purple)[$ssh_symbol](bold blue)  '
+format = '@ [$hostname](bold purple)(bold blue)'
 trim_at = ''
 disabled = false
 
