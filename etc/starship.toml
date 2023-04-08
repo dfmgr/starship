@@ -1,9 +1,10 @@
-format = """
-[╭─user───❯](bold blue)$username(bold blue)$hostname : $directory
-[┣─project❯](bold red)$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
-[╰─cmd $cmd_duration────❯$character](bold green)
-"""
-#format = '$all'
+# https://starship.rs/config
+#format = """
+#[╭─user───❯](bold blue)$username(bold blue)$hostname : $directory
+#[┣─project❯](bold red)$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
+#[╰─cmd $cmd_duration────❯$character](bold green)
+#"""
+format = '$all'
 
 continuation_prompt = '▶▶ '
 
