@@ -18,7 +18,7 @@ show_always = true
 [hostname]
 ssh_only = false
 ssh_symbol = "🌐 "
-format = '@ [$hostname](bold purple)(bold blue)'
+format = '@ [$hostname](bold purple)(bold blue) '
 trim_at = ''
 disabled = false
 
