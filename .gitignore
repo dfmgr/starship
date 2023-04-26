@@ -1,4 +1,4 @@
-# gitignore created on 04/08/23 at 16:37
+# gitignore created on 04/25/23 at 14:44
 # Disable reminder in prompt
 ignoredirmessage
 
@@ -20,7 +20,7 @@ ignoredirmessage
 
 ### macOS ###
 # General
-.DS_Store
+.DS_Store?
 .AppleDouble
 .LSOverride
 
@@ -69,6 +69,10 @@ $RECYCLE.BIN/
 *.msix
 *.msm
 *.msp
+
+# misc
+!*/README*
+!inc/main.bash
 
 # Windows shortcuts
 *.lnk
